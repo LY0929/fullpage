@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input,textarea,th,td,select{ margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6{ font-weight: normal; }
+*{ padding: 0px; margin: 0px; }
+em{ font-style:normal;}
+li{ list-style:none;}
+a{ text-decoration:none;}
+img{ border:none; vertical-align:top;}
+table{ border-collapse:collapse;}
+input,textarea{ outline:none;}
+textarea{ resize:none; overflow:auto;} 
+body{ font:12px "微软雅黑"; background-color: #000}
+#content .section{ overflow: hidden; }
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span{ background-color: white }
+#fp-nav ul li a span, .fp-slidesNav ul li a span{ border: 1px solid #fff }
+#content .section .onePage1{ background: url(../images/13.png) no-repeat center center; width: 100%; height: 100%; }
+#content .section .onePage2{ background: url(../images/11.png) no-repeat center center;  width: 100%; height: 100%;}
+.fp-controlArrow.fp-prev{ border: none; background: url(../images/leftf.png); width: 70px; height: 70px; background-size: 70px 70px;}
+.fp-controlArrow.fp-next{ border: none;  background: url(../images/rightf.png);width: 70px; height: 70px; background-size: 70px 70px;}
+#content .section .onePage1 .onePage1_1{ width: 226px; height: 324px; position:relative; float: left; left: -500px;  background: url(../images/21.png) no-repeat; background-position: 48px 66px;}
+#content .section .onePage1  .min_onePage1{ width: 80%; height:auto; margin: 0px auto; }
+#content .section .onePage1 .onePage1_2{ float: left;  display: table; width: 60%; height: 324px; padding-left: 30px;}
+#content .section .onePage1 .onePage1_2 span{ display: table-cell; vertical-align: middle;display: none; }
+#content .section .onePage1 .onePage1_2 p{ color: white; font-size: 15px; line-height: 25px;}
+#content .section .onePage1 .onePage1_2 .onePage1_2_p{ line-height: 40px;}
+
+#content .section .onePage2 .onePage1_1{ width: 255px; height: 339px; margin-top: -30px; right: -600px; position:relative; float: right; background: url(../images/2.png) no-repeat; background-position: 50px 70px;}
+#content .section .onePage2 .onePage1_1 .one_img{position: absolute; top: 50%; margin-top: -94px; left: 50%; margin-left: -75px}
+#content .section .onePage2  .min_onePage1{ width: 80%; height:auto; margin: 0px auto;}
+#content .section .onePage2 .onePage1_2{ float: right;  display: table; width: 60%; height: 324px; margin-right: -40px;}
+#content .section .onePage2 .onePage1_2 span{ display: table-cell; vertical-align: middle; padding-top: 100px; display: none;}
+#content .section .onePage2 .onePage1_2 p{ color: white; font-size: 15px; line-height: 25px; text-align: right;}
+#content .section .onePage2 .onePage1_2 .onePage1_2_p{ line-height: 40px;} 
+
+#content .section .twoPage{ width: 90%; margin: 0px auto; height: auto; position: relative;} 
+#content .section .twoPage .twoPage_left{ width:888px; padding: 0px 50px; height: 381px; float: left;  background: url(../images/12.png) no-repeat; background-position: 0px 100px;}
+#content .section .twoPage .twoPage_left .twoPage_left1_img{ float: left;}
+#content .section .twoPage .twoPage_left .twoPage_left1_img .text{ display: table; width: 100%; padding: 15px 0px;}
+#content .section .twoPage .twoPage_left .twoPage_left1_img .text span{ display: table-cell; letter-spacing: 1px; vertical-align: middle; text-align: center; font-size: 15px; line-height: 20px; color: white }
+#content .section .twoPage .twoPage_left .twoPage_left1_img .line{ width: 32px; height: 1px;  background-color: rgb(255, 192, 1); margin: 0px auto; margin-top: 5px; }
+#content .section .twoPage .twoPage_left img{ display: block; }
+#content .section .twoPage .twoPage_right .twoPage_right_top{ position: absolute; z-index: 10; width: 76px; height: 120px; right: 50px; top:0px; margin-top: -50px;} 
+#content .section .twoPage .twoPage_right .two{ position: absolute; right: 50px;top: 0px; margin-top: -20px;}
+#content .section .twoPage .twoPage_right .two span{ font-size: 35px; color: #fff; }
+#content .section .twoPage .twoPage_right .two p{ color: #fff; font-size: 14px; }
+#content .section .two_line{ width: 75px; height: 1px; background-color: rgb(255, 192, 1); position: absolute; right: 120px; bottom: 50px;}
+
+#content .section .threePage{ width: 90%; height: auto; margin: 0px auto; position: relative;} 
+#content .section .threePage .three_nav{ color: #fff;float: left; width: 175px; box-sizing: border-box;}
+#content .section .threePage .three_nav li{ border-radius: 3px; width: 100%; padding: 5px 10px; margin: 0px auto; height: 95px; cursor: pointer; text-align: center; box-sizing: border-box; font-size: 15px; background-color: #222; }
+#content .section .threePage .three_nav li div{ width: 100%; height: 100%; border: 1px solid transparent;line-height: 85px; border-radius: 3px}
+#content .section .threePage .three_content { float: left; width: 80%;}
+#content .section .threePage .three_content h3{ color: #fff;font-size: 24px; font-weight: normal; line-height: 94px;}
+#content .section .threePage .three_content p{ color: #999 ; font-size: 14px; line-height: 24px;}
+#content .section .threePage .three_content .three_content_img{ display: inline-block; margin: 0px 30px; float: left;}
+#content .section .threePage .three_content .three_content_text{ width: 398px; height: auto; float: left; padding-top: 90px}
+
+#content .section .threePage .threePage_right .threePage_right_top{ position: absolute; z-index: 10; width: 76px; height: 120px; right: 50px; top:0px; margin-top: -50px;} 
+#content .section .threePage .threePage_right .two{ position: absolute; right: 50px;top: 0px; margin-top: -20px;}
+#content .section .threePage .threePage_right .two span{ font-size: 35px; color: #fff; }
+#content .section .threePage .threePage_right .two p{ color: #fff; font-size: 14px; }
+#content .section .three_line{ width: 75px; height: 1px; background-color: rgb(255, 192, 1); position: absolute; right: 120px; bottom: 50px;}
+
+#content .section.section04{ background: url(../images/14.png) no-repeat center center; padding-right: 100px}
+#content .section.section04 .fourthPage_text h4{ font-size: 22px; line-height: 30px; color: #fff;font-weight: normal; letter-spacing: 1px;}
+#content .section.section04 .fourthPage_text p{ font-size: 14px; line-height: 30px; color: rgb(153,153,153);}
+#content .section.section04 .fourthPage{ width:424px; height: auto; float: right; position: relative;}
+#content .section.section04 .fourthPage_text { margin-top: 66px; }
+
+#content .section  .fourthPage_right .fourthPage_right_top{ position: absolute; z-index: 10; width: 76px; height: 120px; left: -100px; top:0px; margin-top: -70px;} 
+#content .section  .fourthPage_right .two{ position: absolute; left: -150px; top: 0px; margin-top: -40px; text-align: center;}
+#content .section  .fourthPage_right .two span{ font-size: 35px; color: #fff; text-align: center;}
+#content .section  .fourthPage_right .two p{ color: #fff; font-size: 14px; text-align: center;}
+#content .section .fourth_line{ width: 75px; height: 1px; background-color: rgb(255, 192, 1); position: absolute; left: -100px ; bottom: -36px;}
+
+#content .section .fifthPage{ width: 90%; position: relative; height: auto; margin: 0px auto; margin-left: 120px}
+#content .section .fifthPage p{color: rgb(153,153,153); font-size: 16px; line-height: 30px; text-indent: 2em; width: 540px}
+
+#content .section  .fifthPage_right{ position: absolute; left: 0px; width: 76px; height: 100%; top: 0px}
+#content .section  .fifthPage_right .fifthPage_right_top{ position: absolute; z-index: 10; width: 76px; height: 120px; left: 0px; top:-120px; margin-top: -70px;} 
+#content .section  .fifthPage_right .two{ position: absolute; left: -80px; top: -110px; margin-top: -40px;}
+#content .section  .fifthPage_right .two span{ font-size: 34px; line-height: 20px; color: #f7f7f7; font-weight: normal;}
+#content .section  .fifthPage_right .two p{ color: #ccc; font-size: 14px; text-align: left; text-indent: 0}
+#content .section .fifth_line{ width: 75px; height: 1px; background-color: rgb(255, 192, 1); position: absolute; left: 0px ; bottom: -100px;}
+
+
+#content .section .sixPage{ width: 90%; height: auto; margin: 0px auto }
+#content .section .sixPage .text_title{ text-align: center; }
+#content .section .sixPage .text_title h4{color: #f7f7f7; font-size: 34px; line-height: 20px;}
+#content .section .sixPage .text_title p{ color: #666; line-height: 20px; font-size: 14px; margin-top: 10px}
+
+#content .section .sixPage .sixPage_img{ width: 1160px; margin: 0px auto}
+#content .section .sixPage .sixPage_img .sixPage_text{ float: left; width: 360px; height: 354px; color: #fff; background: #fff;}
+#content .section .sixPage .sixPage_img .sixPage_text h5{ cursor: pointer;font-weight: normal; color: #666; font-size: 18px; line-height: 32px; margin-top: 10px; font-weight: normal;  padding: 0px 15px;}
+#content .section .sixPage .sixPage_img .sixPage_text p { color: #808080; font-size: 14px; line-height:24px; padding: 0px 15px;}
+#content .section .sixPage .sixPage_img img{ cursor: pointer;}
+#content .section .sixPage .sixPage_img .sixPage_text h5:hover{ color: #000}

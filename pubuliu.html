@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{ padding: 0px; margin: 0px; }
+		#main{  position: relative; background: red}
+		.main_box{ padding: 15px 0px 0px 15px;  float: left;  height: auto; }
+		.pic{padding: 10px;  border:1px solid gray; border-radius: 5px; box-shadow: 0 0 6px #ccc;}
+		img{ width: 162px;}
+	</style>
+	<!-- <script type="text/javascript" src='jquery-1.12.3.js'></script> -->
+</head>
+<body>
+	<div id="main">
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/0.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/1.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/2.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/3.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/4.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/5.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/6.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/7.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/8.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/9.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/10.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/11.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/12.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/8.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/13.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/14.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/15.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/16.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/17.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/18.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/19.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/20.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/21.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/22.jpg">
+			</div>
+		</div>
+		<div class="main_box">
+			<div class="pic">
+				<img src="images/23.jpg">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.onload=function(){
+			getClass('main','main_box');
+			var dataInt={'data':[{'src':'24.jpg'},{'src':'25.jpg'},{'src':'26.jpg'},{'src':'27.jpg'},{'src':'28.jpg'},{'src':'29.jpg'},{'src':'30.jpg'}]};
+			window.onscroll=function(){
+				if(isft()){
+					var o=document.getElementById('main');
+					for(var i=0;i<dataInt.data.length;i++){
+						 	var oPin=document.createElement('div'); //添加 元素节点
+			                oPin.className='main_box';                   //添加 类名 name属性
+			                o.appendChild(oPin);              //添加 子节点
+			                var oBox=document.createElement('div');
+			                oBox.className='pic';
+			                oPin.appendChild(oBox);
+			                var oImg=document.createElement('img');
+			                oImg.src='images/'+dataInt.data[i].src;
+			                oBox.appendChild(oImg);
+					}
+					getClass('main','main_box');
+				}
+			}
+		}
+		function getClass(parent,child){
+			var max_box=document.getElementById(parent);
+			var min_box=max_box.getElementsByClassName(child);
+			var num=min_box[0].offsetWidth;
+			var cls=Math.floor(document.documentElement.clientWidth/num);
+			max_box.style.cssText='width:'+cls*num+'px;margin:0px auto';
+			var arry=[]
+			for(var i=0;i<min_box.length;i++){
+				if(i<cls){
+					arry.push(min_box[i].offsetHeight);
+				}else{
+					var min_num=Math.min.apply(null,arry);
+					min_box[i].style.position='absolute';
+					min_box[i].style.top=min_num+'px';
+					min_box[i].style.left=min_box[arry.indexOf(min_num)].offsetLeft+'px';
+					arry[arry.indexOf(min_num)]+=min_box[i].offsetHeight;//每循环一次就改变一次数组  每次改变的是每列的高度
+				}
+			}
+		}
+		function isft(){
+			var max_box=document.getElementById('main');
+			var min_box=max_box.getElementsByClassName('main_box');
+			var top=min_box[min_box.length-1].offsetTop+Math.floor(min_box[min_box.length-1].offsetHeight/2);
+			var sol=document.body.scrollTop||document.documentElement.scrollTop;
+			var bodyh=document.documentElement.clientHeight;
+			return top<sol+bodyh;
+
+		}
+
+
+		//jquery
+		// $(function(){
+		// 	show1();
+			
+		// 	var dataInt={'data':[{'src':'24.jpg'},{'src':'25.jpg'},{'src':'26.jpg'},{'src':'27.jpg'},{'src':'28.jpg'},{'src':'29.jpg'},{'src':'30.jpg'}]};
+			
+		// 	$(window).on('scroll',function(){
+		// 		if(isft()){
+		// 			$.each(dataInt.data,function(index,value){
+		// 				var o=$('<div>').addClass('main_box').appendTo($('#main'));
+		// 				var o1=$('<div>').addClass('pic').appendTo(o);
+		// 				$('<img>').attr('src','images/'+$(value).attr('src')).appendTo(o1);
+		// 			})
+		// 			show1();
+		// 		}
+		// 	});
+		
+		// });
+
+		// function isft(){
+		// 	var $last=$('#main > .main_box').last().offset().top+Math.floor($('#main > .main_box').last().outerHeight()/2);
+		// 	var $body=$(window).height();
+		// 	var $scroll=$(window).scrollTop();
+		// 	return $last<$body+$scroll
+		// }
+
+		// function show1(){
+		// 	var arry=[];
+		// 	var cls=Math.floor($(document).width()/$('#main .main_box').eq(0).width());
+		// 	$('#main').width($('#main .main_box').eq(0).width()*cls).css('margin','0px auto');
+		// 	$('#main .main_box').slice(0,cls-1).each(function(){
+		// 		arry.push($(this).outerHeight())
+		// 	});
+		// 	$('#main .main_box').slice(cls-1).each(function(){
+		// 		var minnum=Math.min.apply(null,arry);
+		// 		var minindex=arry.indexOf(minnum);
+		// 		$(this).css({
+		// 			'position':'absolute',
+		// 			'top':minnum+'px',
+		// 			'left':minindex*$('#main .main_box').eq(0).outerWidth()+'px',
+		// 		})
+		// 		arry[minindex]+=$(this).outerHeight();
+		// 	});
+		// }
+	</script>
+</body>
+</html>
